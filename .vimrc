@@ -1,6 +1,7 @@
-colorscheme solarized
+let g:gruvbox_italics=1
 set background=dark
-let g:solarized_termcolors = 16
+colorscheme gruvbox
+
 syntax on
 
 set tabstop=4    "number of visual spaces per TAB

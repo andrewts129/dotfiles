@@ -44,7 +44,7 @@ set $right semicolon
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal --profile=i3Profile --hide-menubar
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -224,4 +224,4 @@ hide_edge_borders both
 # Dmenu replacementD
 bindsym $mod+d exec rofi -show drun -lines 5 -eh 2 -width 100 -padding 800 -bw 0 -bc "$bg-color-dark-grey" -bg "$bg-color-dark-grey" -fg "$main-white-light" -hlbg "$bg-color-dark-grey" -hlfg "#9575cd" -font "Source Sans Pro 18"
 
-exec --no-startup-id compton -f
+exec --no-startup-id compton -b --config /home/andrew/.config/compton/compton.conf
