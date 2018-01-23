@@ -124,3 +124,6 @@ export PATH=/home/andrew/.anaconda3/bin:/home/andrew/Android/platform-tools:$PAT
 
 # https://unix.stackexchange.com/questions/24419/terminal-autocomplete-cycle-through-suggestions
 bind TAB:menu-complete
+
+# Should make gruvbox work with urxvt
+source /home/andrew/.config/gruvbox_256palette.sh

@@ -51,5 +51,8 @@ URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
-URxvt.keysym.Control-v: eval:paste_clipboard
-URxvt.keysym.Control-c: eval:selection_to_clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! Disables something mapped to ctrl-shift
+URxvt*iso14755: False
