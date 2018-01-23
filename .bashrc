@@ -127,3 +127,5 @@ bind TAB:menu-complete
 
 # Should make gruvbox work with urxvt
 source /home/andrew/.config/gruvbox_256palette.sh
+
+
