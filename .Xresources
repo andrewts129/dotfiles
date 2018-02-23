@@ -38,15 +38,22 @@
 URxvt*scrollBar:         false
 URxvt*scrollBar_right:   false
 
+URxvt.cursorBlink: 1
+
 URxvt*transparent:       false
 
 URxvt.font: xft:Source Code Pro:pixelsize=16
 URxvt.letterSpace: -1
 
+URxvt.internalBorder: 12
+
 *antialias:  true
 *autohint:   false
 
-URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard,urxvt-colors
+URxvt*perl-lib: /home/andrew/.dynamic-colors/urxvt-colors
+
+Urxvt*keysym.Control-Tab: perl:urxvt-colors:
 
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
@@ -56,3 +63,8 @@ URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
 ! Disables something mapped to ctrl-shift
 URxvt*iso14755: False
+
+URxvt.iconFile: /usr/share/icons/Paper/512x512/apps/utilities-terminal.png
+
+xterm*dynamicColors: true
+urxvt*dynamicColors: on

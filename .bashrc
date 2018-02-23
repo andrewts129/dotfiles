@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=/home/andrew/.anaconda3/bin:/home/andrew/Android/platform-tools:$PATH
+export PATH=/home/andrew/.dynamic-colors/bin:/home/andrew/.anaconda3/bin:/home/andrew/Android/platform-tools:$PATH
 
 #if [ $DESKTOP_SESSION = "i3" ]; then
 #	(wal -r -t &)
@@ -128,4 +128,7 @@ bind TAB:menu-complete
 # Should make gruvbox work with urxvt
 source /home/andrew/.config/gruvbox_256palette.sh
 
+source $HOME/.dynamic-colors/completions/dynamic-colors.zsh
+
+dynamic-colors init
 

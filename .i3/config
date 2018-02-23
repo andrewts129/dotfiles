@@ -26,9 +26,9 @@ set $gray #a89984
 set $darkgray #1d2021
 
 # class                 border|backgr|text|indicator|child_border
-client.focused          $blue $blue $darkgray $purple $yellow
-client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+client.focused          $blue $blue $darkgray $yellow $blue
+client.focused_inactive $darkgray $darkgray $yellow $darkgray $darkgray
+client.unfocused        $darkgray $darkgray $yellow $darkgray $darkgray
 client.urgent           $red $red $white $red $red
 
 # use these keys for focus, movement, and resize directions when reaching for
@@ -48,7 +48,8 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # lock
-bindsym $mod+Shift+x exec i3lock
+#bindsym $mod+Shift+x exec i3lock
+bindsym $mod+Shift+x exec --no-startup-id lock -f Source-Sans-Pro-Light
 
 # ==All this below is replaced by Rofi== 
 # start dmenu (a program launcher)
@@ -156,7 +157,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+bindsym $mod+Shift+e exec xfce4-session-logout
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -194,9 +197,9 @@ bindsym $mod+r mode "resize"
 # Copied from https://faq.i3wm.org/question/3747/enabling-multimedia-keys/?answer=3759#post-id-3759
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # https://github.com/haikarainen/light
 # Sreen brightness controls 
@@ -224,12 +227,12 @@ bindsym $mod+d exec rofi -show drun -font "Source Sans Pro 18"
 
 exec --no-startup-id compton -b --config /home/andrew/.config/compton/compton.conf
 
-exec_always --no-startup-id /home/andrew/.config/polybar/launch.sh
+#exec_always --no-startup-id /home/andrew/.config/polybar/launch.sh
 
 #exec --no-startup-id /opt/Enpass/bin/runenpass.sh
 #exec --no-startup-id nm-applet
 
 # Gnome integration
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-exec_always --no-startup-id gnome-power-manager
+#exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+#exec_always --no-startup-id gnome-power-manager
 
