@@ -79,6 +79,7 @@ plugins=(
     git
     zsh-autosuggestions
     virtualenv
+    dotenv
     zsh-syntax-highlighting
 )
 
