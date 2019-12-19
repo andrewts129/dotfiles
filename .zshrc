@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export EDITOR="vim"
-export PATH="$PATH:/home/andrew/Scripts"
+export PATH="$PATH:/home/andrew/Scripts:/home/andrew/Android/platform-tools"
 
 alias python="python3"
 alias pip="pip3"
