@@ -137,3 +137,6 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=true
 # zsh-syntax-highlighting config
 export ZSH_HIGHLIGHT_STYLES[path]=none
 export ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+
+# Output for 'time' command
+export TIMEFMT=$'job\t\t%J\nreal\t\t%E\nuser\t\t%U\nsys\t\t%S\nmax memory\t%M MB'
