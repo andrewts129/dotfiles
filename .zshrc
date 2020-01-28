@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export EDITOR="vim"
-export PATH="$PATH:/home/andrew/Scripts:/home/andrew/Android/platform-tools"
+export PATH="$PATH:/home/andrew/.local/bin:/home/andrew/Scripts:/home/andrew/Android/platform-tools"
 
 alias python="python3"
 alias pip="pip3"
@@ -122,7 +122,8 @@ alias gs="git status"
 alias ga="git add ."
 alias gc="git commit -m"
 alias gca="git commit --amend"
-alias gp="git push"
+alias {gps,gp}="git push"
+alias gpl="git pull"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
