@@ -70,6 +70,9 @@ HYPHEN_INSENSITIVE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# This needs to be all the way up here for some reason
+export ZSH_DOTENV_PROMPT=false
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -82,6 +85,7 @@ plugins=(
     dotenv
     zsh-syntax-highlighting
 )
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,18 +116,23 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export EDITOR="vim"
-export PATH="$PATH:/home/andrew/.local/bin:/home/andrew/Scripts:/home/andrew/Android/platform-tools"
+export PATH="$PATH:/home/andrew/.local/bin:/snap/bin:/home/andrew/Scripts:/home/andrew/Android/platform-tools"
 
 alias python="python3"
 alias pip="pip3"
+
 alias c="clear"
 alias e="exit"
+
 alias gs="git status"
 alias ga="git add ."
 alias gc="git commit -m"
 alias gca="git commit --amend"
 alias {gps,gp}="git push"
 alias gpl="git pull"
+
+alias jpl="jupyter lab"
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -141,3 +150,4 @@ export ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # Output for 'time' command
 export TIMEFMT=$'job\t\t%J\nreal\t\t%E\nuser\t\t%U\nsys\t\t%S\nmax memory\t%M MB'
+
