@@ -1,4 +1,4 @@
-source "~/.keys"
+source "$HOME/.keys"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 GITSTATUS_ENABLE_LOGGING=1
@@ -23,7 +23,7 @@ plugins=(
 
 export EDITOR="vim"
 
-source "~/.aliases"
+source "$HOME/.aliases"
 
 # Autocompletes on first tab, even if ambiguous
 setopt menu_complete
