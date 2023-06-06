@@ -1,0 +1,43 @@
+source "~/.keys"
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+GITSTATUS_ENABLE_LOGGING=1
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+HYPHEN_INSENSITIVE="true"
+
+plugins=(
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    gitfast
+)
+
+export EDITOR="vim"
+
+source "~/.aliases"
+
+# Autocompletes on first tab, even if ambiguous
+setopt menu_complete
+
+# zsh-autosuggestions config
+export ZSH_AUTOSUGGEST_STRATEGY=(completion)
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
+
+# zsh-syntax-highlighting config
+(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+export ZSH_HIGHLIGHT_STYLES[path]=none
+export ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+
+# Output for 'time' command
+export TIMEFMT=$'job\t\t%J\nreal\t\t%E\nuser\t\t%U\nsys\t\t%S\nmax memory\t%M KB'
+
+export PATH="/usr/local/opt/llvm/bin:$PATH"
